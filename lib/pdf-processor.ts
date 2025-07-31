@@ -112,7 +112,7 @@ function extractPersonalInfo(text: string) {
   }
 
   // Extract phone number
-  const phoneRegex = /(\+?1[-.\s]?)?$$?([0-9]{3})$$?[-.\s]?([0-9]{3})[-.\s]?([0-9]{4})/g
+  const phoneRegex = /(\+?1[-.\s]?)?([0-9]{3})[-.\s]?([0-9]{3})[-.\s]?([0-9]{4})/g;
   const phoneMatch = text.match(phoneRegex)
   if (phoneMatch) {
     personalInfo.phone = phoneMatch[0]
